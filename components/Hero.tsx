@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getAssetPath } from '@/content/site';
 
 export default function Hero() {
   return (
@@ -8,7 +9,7 @@ export default function Hero() {
       {/* Background Hero Image with Dark Gradient Vignette for Legibility */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-physio.jpg"
+          src={getAssetPath('/images/hero-physio.jpg')}
           alt="Physiotherapy rehabilitation session at Braakhuis Fysiotherapie"
           fill
           priority
@@ -71,7 +72,7 @@ export default function Hero() {
           >
             <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-white/30">
               <Image
-                src="/images/manual-therapy.jpg"
+                src={getAssetPath('/images/manual-therapy.jpg')}
                 alt="Physiotherapy treatment thumbnail"
                 fill
                 className="object-cover"

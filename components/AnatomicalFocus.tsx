@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getAssetPath } from '@/content/site';
 
 interface FocusPoint {
   id: string;
@@ -79,7 +80,7 @@ export default function AnatomicalFocus() {
               {/* Anatomy Diagram Container */}
               <div className="relative w-full h-[380px] sm:h-[440px] rounded-2xl overflow-hidden bg-white/40 flex items-center justify-center border border-white/60">
                 <Image
-                  src="/images/anatomy-diagram.jpg"
+                  src={getAssetPath('/images/anatomy-diagram.jpg')}
                   alt="Anatomical diagram of human musculoskeletal points"
                   fill
                   className="object-contain p-2"

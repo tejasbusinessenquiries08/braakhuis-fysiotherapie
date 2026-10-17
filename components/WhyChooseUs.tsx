@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { SITE_CONFIG } from '@/content/site';
+import { SITE_CONFIG, getAssetPath } from '@/content/site';
 
 interface HighlightCard {
   title: string;
@@ -17,21 +17,21 @@ const HIGHLIGHTS: HighlightCard[] = [
     description: 'We do not run open gym floor sessions or leave you with hot packs. Every session is conducted in a private clinical suite with your designated physiotherapist.',
     statNumber: '45 min',
     statLabel: 'Full Initial Assessment',
-    image: '/images/manual-therapy.jpg',
+    image: getAssetPath('/images/manual-therapy.jpg'),
   },
   {
     title: 'Objective Recovery Milestones',
     description: 'We measure limb symmetry and force output using digital testing. You know exactly when your tendon or joint has reached safe discharge capacity.',
     statNumber: SITE_CONFIG.stats.treatmentsCompleted,
     statLabel: 'Completed Treatments',
-    image: '/images/hero-physio.jpg',
+    image: getAssetPath('/images/hero-physio.jpg'),
   },
   {
     title: 'HCPC & CSP Accredited Care',
     description: 'All 9 clinicians hold full registration with the Health & Care Professions Council and the Chartered Society of Physiotherapy with postgraduate training.',
     statNumber: `${SITE_CONFIG.stats.yearsTrading} Years`,
     statLabel: 'Clinical Experience',
-    image: '/images/clinic-plaque.jpg',
+    image: getAssetPath('/images/clinic-plaque.jpg'),
   },
 ];
 
